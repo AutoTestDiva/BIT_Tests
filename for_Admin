@@ -1,0 +1,3 @@
+
+command for Git Bush Here: в папке BIT в бэкэнде вызвать cmd  ввести комманду
+mvn spring-boot:run
