@@ -12,6 +12,7 @@ public class TestBase {
 
     @BeforeMethod
     public void init(){
+        System.err.close();
         driver = new ChromeDriver();
         driver.get("http://localhost:8080/cms.html");
         driver.manage().window().maximize();
