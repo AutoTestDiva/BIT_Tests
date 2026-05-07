@@ -1,5 +1,6 @@
 package org.bit.project.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,7 +16,7 @@ public class CMSPage extends BasePage {
 
     public CMSPage isCMSElementPresent() {
         Assert.assertTrue(isElementPresent(cmsElement, 10));
-        return this;
+         return this;
     }
 
     public CMSPage isCMSTextPresent(String text) {
