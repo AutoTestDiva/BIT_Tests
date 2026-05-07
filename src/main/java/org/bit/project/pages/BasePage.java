@@ -13,12 +13,12 @@ import java.net.URL;
 import java.time.Duration;
 
 public abstract class BasePage {
-    private final JavascriptExecutor js;
-    WebDriver driver;
+    public WebDriver driver;
+    JavascriptExecutor js;
 
-    public BasePage(WebDriver driver, JavascriptExecutor js) {
+    public BasePage(WebDriver driver) {
         this.driver = driver;
-        this.js = js;
+        js = (JavascriptExecutor) driver;
         PageFactory.initElements(driver, this);
     }
 
@@ -33,12 +33,13 @@ public abstract class BasePage {
             element.sendKeys(text);
         }
     }
-    public void clickWithJSExecutor(WebElement element, int x, int y){
+
+    public void clickWithJSExecutor(WebElement element, int x, int y) {
         js.executeScript("window.scrollBy(" + x + "," + y + ")");
         element.click();
     }
 
-    public void typeWithJSExecutor (WebElement element, String text, int x, int y){
+    public void typeWithJSExecutor(WebElement element, String text, int x, int y) {
         if (text != null) {
             clickWithJSExecutor(element, x, y);
             element.clear();
@@ -50,6 +51,7 @@ public abstract class BasePage {
         return new WebDriverWait(driver, Duration.ofSeconds(time))
                 .until(ExpectedConditions.textToBePresentInElement(element, text));
     }
+
     public boolean isTextPresent(WebElement element, String text) {
         return element.getText().contains(text);
     }
@@ -71,6 +73,7 @@ public abstract class BasePage {
             System.err.println("JavascriptExecutor is not initialized!");
         }
     }
+
     public void pause(int millis) {
         try {
             Thread.sleep(millis);
@@ -78,6 +81,7 @@ public abstract class BasePage {
             throw new RuntimeException(e);
         }
     }
+
     public void verifyLinks(String linkUrl) {
         try {
             //this is connection
@@ -92,7 +96,7 @@ public abstract class BasePage {
             } else {
                 System.out.println(linkUrl + "-" + connection.getResponseMessage());
             }
-        }catch (Exception ex){
+        } catch (Exception ex) {
             System.out.println(linkUrl + "-" + ex.getMessage() + " is a brokenLink");
         }
     }
@@ -110,6 +114,7 @@ public abstract class BasePage {
         js.executeScript("document.getElementById('adplus-anchor').style.display='none';");
         //.style.display='none' - именно это и скрывает рекламу на экране
     }
+
     protected String getValueAttribute(WebElement element, String name) {
         return element.getAttribute(name);  //возвращает значение аттрибута в виде строки
     }
