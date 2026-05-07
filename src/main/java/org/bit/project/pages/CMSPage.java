@@ -16,7 +16,7 @@ public class CMSPage extends BasePage {
 
     public CMSPage isCMSElementPresent() {
         Assert.assertTrue(isElementPresent(cmsElement, 10));
-         return this;
+        return this;
     }
 
     public CMSPage isCMSTextPresent(String text) {
