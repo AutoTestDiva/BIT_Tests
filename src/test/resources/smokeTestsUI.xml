@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SmokeTestsUI">
+    <test name="SmokeTestsUI">
+        <classes>
+            <class name="org.bit.project.tests.UITests.CMSPageTests"/>
+        </classes>
+    </test>
+</suite>

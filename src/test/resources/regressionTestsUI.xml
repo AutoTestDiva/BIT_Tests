@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="RegressionTestsUI" verbose="1">
+
+    <test name="RegressionTestsUI">
+        <classes>
+            <class name="org.bit.project.tests.UITests.CMSPageTests"/>
+        </classes>
+    </test>
+
+</suite>
