@@ -2,7 +2,24 @@
 1) command for Git Bush Here: в папке BIT в бэкэнде вызвать Git Bush Here, ввести комманду
 mvn spring-boot:run
 2) запуск тестов через терминал или cmd (входить через папку проекта) командой:
-mvn test "-Dsurefire.suiteXmlFiles=src/test/resources/smokeTestsUI.xml"
-3) для создания папки BUILD для сбора отчетов Allure запуск тестов через cmd (входить через папку проекта) командой:
-mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/smokeTestsUI.xml
+mvn clean test "-Dsurefire.suiteXmlFiles=src/test/resources/smokeTestsUI.xml"
+3) для создания папки BUILD для сбора отчетов Allure запуск тестов через терминал (писать в кавычках)
+ или cmd (без кавычек)(входить через папку проекта) командой:
+mvn clean test "-Dsurefire.suiteXmlFiles=src/test/resources/smokeTestsUI.xml"
+
+4) как создать Allure для отчетов:
+создать файл allure.properties
+
+создать в src/test/resources/ папку META-INF/а также папку services/, а также файл org.testng.ITestNGListener
+т.е. будет выглядеть так: src/test/resources/META-INF/services/org.testng.ITestNGListener
+
+Потом запустить в терминале команду: mvn clean test
+Появится в папке target  папка allure-results (т.е. target/allure-results)
+
+!!! Потом ввести команду: mvn allure:serve
+В гуглхроме откроется отчет:  Allure Report
+
+!!! Потом ввести команду в терминале или cmd: mvn allure:report
+Появится папка: target/site/allure-maven-plugin/
+Там будет index.html. Навести курсором на правый верхний угол и появятся разные браузеры с отчетами
 

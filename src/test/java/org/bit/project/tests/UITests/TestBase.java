@@ -20,10 +20,13 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class TestBase {
     Logger logger = LoggerFactory.getLogger(TestBase.class);
     String browser = System.getProperty("browser", Browser.CHROME.browserName());
     WebDriver driver;
+
+
 
 //    @BeforeMethod
 //    public void startLogger(Method m) {

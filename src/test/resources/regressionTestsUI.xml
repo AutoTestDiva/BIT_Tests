@@ -2,10 +2,6 @@
 
 <suite name="RegressionTestsUI" verbose="1">
 
-    <listeners>
-        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
-    </listeners>
-
     <test name="RegressionTestsUI">
         <classes>
             <class name="org.bit.project.tests.UITests.CMSPageTests"/>
