@@ -1,3 +1,5 @@
 
-command for Git Bush Here: в папке BIT в бэкэнде вызвать Git Bush Here, ввести комманду
+1) command for Git Bush Here: в папке BIT в бэкэнде вызвать Git Bush Here, ввести комманду
 mvn spring-boot:run
+2) запуск тестов через терминал или cmd (входить через папку проекта) командой:
+mvn test "-Dsurefire.suiteXmlFiles=src/test/resources/smokeTestsUI.xml"
