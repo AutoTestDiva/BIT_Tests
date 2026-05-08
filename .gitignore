@@ -3,6 +3,15 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+# Allure results
+allure-results/
+build/allure-results/
+target/allure-results/
+
+# OS
+.DS_Store
+Thumbs.db
+
 ### IntelliJ IDEA ###
 .idea/
 *.iws
