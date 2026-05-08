@@ -3,3 +3,6 @@
 mvn spring-boot:run
 2) запуск тестов через терминал или cmd (входить через папку проекта) командой:
 mvn test "-Dsurefire.suiteXmlFiles=src/test/resources/smokeTestsUI.xml"
+3) для создания папки BUILD для сбора отчетов Allure запуск тестов через cmd (входить через папку проекта) командой:
+mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/smokeTestsUI.xml
+
