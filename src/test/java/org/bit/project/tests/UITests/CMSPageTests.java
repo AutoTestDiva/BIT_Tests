@@ -13,9 +13,9 @@ public class CMSPageTests extends TestBase {
     }
 
     @Test
-    public void isCMSTextPresentPositiveTest() {
+    public void isCMSTextPresentegativeTest() {
         new CMSPage(driver)
-                .isCMSTextPresent("CMS");
+                .isCMSTextPresent("C*S");
     }
 
     @Test
