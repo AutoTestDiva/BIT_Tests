@@ -21,5 +21,5 @@ mvn clean test "-Dsurefire.suiteXmlFiles=src/test/resources/smokeTestsUI.xml"
 
 !!! Потом ввести команду в терминале или cmd: mvn allure:report
 Появится папка: target/site/allure-maven-plugin/
-Там будет index.html. Навести курсором на правый верхний угол и появятся разные браузеры с отчетами
+Там будет файл index.html. Навести курсором на правый верхний угол и появятся разные браузеры с отчетами
 
