@@ -27,7 +27,6 @@ public class TestBase {
     WebDriver driver;
 
 
-
 //    @BeforeMethod
 //    public void startLogger(Method m) {
 //        logger.info("****************************************************************");
@@ -81,9 +80,9 @@ public class TestBase {
     @AfterMethod
     public void tearDown() {
         if (driver != null) {
-            logger.info("Closing browser");
+            //  logger.info("Closing browser");
             driver.quit();
-            logger.info("Browser closed");
+            //logger.info("Browser closed");
         }
     }
 }
