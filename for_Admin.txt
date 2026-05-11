@@ -17,7 +17,7 @@ mvn clean test "-Dsurefire.suiteXmlFiles=src/test/resources/smokeTestsUI.xml"
 !!! запуск тестов через терминал или cmd (входить через папку проекта) командой:
 mvn clean test "-Dsurefire.suiteXmlFiles=src/test/resources/smokeTestsUI.xml"
 
-!!! Потом ввести команду: mvn allure:serve
+-!!! Потом ввести команду: mvn allure:serve
 В гуглхроме откроется отчет:  Allure Report
 
 !!! Потом ввести команду в терминале или cmd: mvn allure:report
