@@ -62,7 +62,7 @@ public class TestBase {
     @BeforeMethod
     public void init() {
         ChromeOptions options = new ChromeOptions(); //для того, чтоб Дефендер не ругался на неизвестный профиль хрома
-        options.addArguments("--guest");
+        options.addArguments("--guest"); //гостевой аккаунт
 
         System.err.close();
         if (browser.equalsIgnoreCase(Browser.CHROME.browserName())) {
